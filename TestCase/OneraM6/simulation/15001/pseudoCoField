@@ -1,0 +1,47 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2012                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    location    "15001";
+    object      pseudoCoField;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 0 0 0 0 0 0];
+
+
+internalField   uniform 47.5995;
+
+boundaryField
+{
+    intPatch
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 0();
+    }
+    wing
+    {
+        type            calculated;
+        value           uniform 47.5995;
+    }
+    symm
+    {
+        type            symmetry;
+    }
+    farfield
+    {
+        type            calculated;
+        value           uniform 47.5995;
+    }
+}
+
+
+// ************************************************************************* //

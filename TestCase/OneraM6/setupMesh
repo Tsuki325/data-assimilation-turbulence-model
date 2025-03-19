@@ -1,0 +1,69 @@
+#!/bin/sh
+
+# Source tutorial run functions
+. $WM_PROJECT_DIR/bin/tools/RunFunctions
+
+cd mesh
+
+# Convert Plot3D mesh
+
+GEO=m6wing
+
+cd p3dMesh
+./expandP3dfmt.py          # Expand multiple node entries '2*0.0' to "0.0 0.0'
+./p3d2gmsh.py $GEO.p3dfmt  # Convert p3d to gmsh
+cd ..
+
+# Work around a gmshToFoam bug in OpenFOAM v2106
+if [ "$FOAM_API" = "2106" ]
+then
+    sed -i 's/^\(\$.*\)$/"\1"/' p3dMesh/$GEO.msh
+fi
+
+# Convert GMSH to FOAM
+# NOTE: gmshToFoam.c has an issue with the standard ordering of .msh files. It therefore 
+# performs a check and inverts hexes which it deems requires reordering. However, in this 
+# case it incorrectly select hexes for reordering which results in the creation of 
+# wrongOrientedFaces and subsequently negative cell volumes. To maintain the original 
+# plot3D ordering and ensure a valid mesh the **keepOrientation** selection should be
+# enforced.
+runApplication gmshToFoam -keepOrientation p3dMesh/$GEO.msh
+
+# Remove internal patch
+runApplication stitchMesh -perfect -toleranceDict stitchMeshToleranceDict  B1KM B4KM -overwrite 
+mv log.stitchMesh log.stitchMesh.1
+runApplication stitchMesh -perfect -toleranceDict stitchMeshToleranceDict  B1J1 B4J1 -overwrite 
+mv log.stitchMesh log.stitchMesh.2
+runApplication stitchMesh -perfect -toleranceDict stitchMeshToleranceDict  B1IM B2I1 -overwrite 
+mv log.stitchMesh log.stitchMesh.3
+runApplication stitchMesh -perfect -toleranceDict stitchMeshToleranceDict  B2KM B3KM -overwrite 
+mv log.stitchMesh log.stitchMesh.4
+runApplication stitchMesh -perfect -toleranceDict stitchMeshToleranceDict  B2IM B3I1 -overwrite 
+mv log.stitchMesh log.stitchMesh.5
+runApplication stitchMesh -perfect -toleranceDict stitchMeshToleranceDict  B3IM B4I1 -overwrite 
+mv log.stitchMesh log.stitchMesh.6
+
+rm -f 0/meshPhi
+
+runApplication createPatch -overwrite 
+
+# Set viscous wall boundary type to 'wall'
+runApplication changeDictionary
+
+# Scale not the same as Fig. B1-1, the Plot3D wing span is nomalised 
+# to 1 m, where as the actual model wing span 1.1963 m
+if [ -z $FOAM_API ]
+then
+    runApplication transformPoints 'scale=( 1.1963 1.1963 1.1963 )'
+else
+    runApplication transformPoints -scale '( 1.1963 1.1963 1.1963 )'
+fi
+
+# Sparse system ordering
+runApplication renumberMesh -overwrite
+
+runApplication checkMesh
+
+cd ..
+
+# ----------------------------------------------------------------- end-of-file

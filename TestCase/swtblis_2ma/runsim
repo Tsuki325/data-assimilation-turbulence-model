@@ -1,0 +1,18 @@
+#!/bin/sh
+cd ${0%/*} || exit 1    # run from this directory
+rm -rf log.*
+rm -rf processor*
+# Source tutorial run functions
+. $WM_PROJECT_DIR/bin/tools/RunFunctions
+
+MESH=mesh
+rm -rf pro*
+rm -rf log.*
+# Parallel ............................
+#runApplication renumberMesh
+runApplication postProcess -func 'writeCellVolumes'
+runApplication decomposePar
+# runParallel `getApplication`
+mpirun -n `getNumberOfProcessors` `getApplication` -parallel 2>&1 | tee log.hisa
+
+

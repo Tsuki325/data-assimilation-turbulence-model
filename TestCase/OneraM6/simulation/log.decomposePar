@@ -1,0 +1,531 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2012                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : v2012 OPENFOAM=2012
+Arch   : "LSB;label=32;scalar=64"
+Exec   : decomposePar
+Date   : Dec 01 2024
+Time   : 22:48:40
+Host   : chen-virtual-machine
+PID    : 29038
+I/O    : uncollated
+Case   : /home/chen/hisa_master_lusgsFoam/examples/M6NN/simulation
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+
+
+Decomposing mesh region0
+
+Create mesh
+
+Calculating distribution of cells
+Selecting decompositionMethod hierarchical [32]
+
+Finished decomposition in 0.2 s
+
+Calculating original mesh data
+
+Distributing cells to processors
+
+Distributing faces to processors
+
+Distributing points to processors
+
+Constructing processor meshes
+
+Processor 0
+    Number of cells = 9216
+    Number of faces shared with processor 1 = 1010
+    Number of faces shared with processor 4 = 1622
+    Number of processor patches = 2
+    Number of processor faces = 2632
+    Number of boundary faces = 2238
+
+Processor 1
+    Number of cells = 9216
+    Number of faces shared with processor 0 = 1010
+    Number of faces shared with processor 2 = 1926
+    Number of faces shared with processor 4 = 1268
+    Number of faces shared with processor 5 = 1129
+    Number of faces shared with processor 6 = 70
+    Number of faces shared with processor 8 = 304
+    Number of faces shared with processor 25 = 6
+    Number of faces shared with processor 29 = 39
+    Number of processor patches = 8
+    Number of processor faces = 5752
+    Number of boundary faces = 498
+
+Processor 2
+    Number of cells = 9216
+    Number of faces shared with processor 1 = 1926
+    Number of faces shared with processor 3 = 917
+    Number of faces shared with processor 6 = 1152
+    Number of faces shared with processor 7 = 277
+    Number of faces shared with processor 26 = 2
+    Number of faces shared with processor 30 = 36
+    Number of processor patches = 6
+    Number of processor faces = 4310
+    Number of boundary faces = 292
+
+Processor 3
+    Number of cells = 9216
+    Number of faces shared with processor 2 = 917
+    Number of faces shared with processor 7 = 1324
+    Number of faces shared with processor 27 = 21
+    Number of processor patches = 3
+    Number of processor faces = 2262
+    Number of boundary faces = 1410
+
+Processor 4
+    Number of cells = 9216
+    Number of faces shared with processor 0 = 1622
+    Number of faces shared with processor 1 = 1268
+    Number of faces shared with processor 5 = 1
+    Number of faces shared with processor 8 = 1527
+    Number of faces shared with processor 20 = 23
+    Number of faces shared with processor 24 = 39
+    Number of processor patches = 6
+    Number of processor faces = 4480
+    Number of boundary faces = 732
+
+Processor 5
+    Number of cells = 9216
+    Number of faces shared with processor 1 = 1129
+    Number of faces shared with processor 4 = 1
+    Number of faces shared with processor 6 = 753
+    Number of faces shared with processor 8 = 947
+    Number of faces shared with processor 9 = 1933
+    Number of faces shared with processor 10 = 1
+    Number of faces shared with processor 12 = 265
+    Number of faces shared with processor 13 = 97
+    Number of faces shared with processor 21 = 7
+    Number of faces shared with processor 25 = 90
+    Number of processor patches = 10
+    Number of processor faces = 5223
+    Number of boundary faces = 257
+
+Processor 6
+    Number of cells = 9216
+    Number of faces shared with processor 1 = 70
+    Number of faces shared with processor 2 = 1152
+    Number of faces shared with processor 5 = 753
+    Number of faces shared with processor 7 = 474
+    Number of faces shared with processor 9 = 401
+    Number of faces shared with processor 10 = 1789
+    Number of faces shared with processor 11 = 3
+    Number of faces shared with processor 14 = 61
+    Number of faces shared with processor 22 = 8
+    Number of faces shared with processor 26 = 138
+    Number of processor patches = 10
+    Number of processor faces = 4849
+    Number of boundary faces = 67
+
+Processor 7
+    Number of cells = 9216
+    Number of faces shared with processor 2 = 277
+    Number of faces shared with processor 3 = 1324
+    Number of faces shared with processor 6 = 474
+    Number of faces shared with processor 10 = 37
+    Number of faces shared with processor 11 = 1369
+    Number of faces shared with processor 23 = 28
+    Number of faces shared with processor 27 = 436
+    Number of processor patches = 7
+    Number of processor faces = 3945
+    Number of boundary faces = 503
+
+Processor 8
+    Number of cells = 9216
+    Number of faces shared with processor 1 = 304
+    Number of faces shared with processor 4 = 1527
+    Number of faces shared with processor 5 = 947
+    Number of faces shared with processor 9 = 3
+    Number of faces shared with processor 12 = 1504
+    Number of faces shared with processor 13 = 1
+    Number of faces shared with processor 16 = 73
+    Number of faces shared with processor 20 = 491
+    Number of processor patches = 8
+    Number of processor faces = 4850
+    Number of boundary faces = 1128
+
+Processor 9
+    Number of cells = 9216
+    Number of faces shared with processor 5 = 1933
+    Number of faces shared with processor 6 = 401
+    Number of faces shared with processor 8 = 3
+    Number of faces shared with processor 10 = 464
+    Number of faces shared with processor 12 = 433
+    Number of faces shared with processor 13 = 1657
+    Number of faces shared with processor 17 = 10
+    Number of faces shared with processor 21 = 49
+    Number of processor patches = 8
+    Number of processor faces = 4950
+    Number of boundary faces = 598
+
+Processor 10
+    Number of cells = 9216
+    Number of faces shared with processor 5 = 1
+    Number of faces shared with processor 6 = 1789
+    Number of faces shared with processor 7 = 37
+    Number of faces shared with processor 9 = 464
+    Number of faces shared with processor 11 = 231
+    Number of faces shared with processor 13 = 288
+    Number of faces shared with processor 14 = 1826
+    Number of faces shared with processor 18 = 25
+    Number of faces shared with processor 22 = 94
+    Number of processor patches = 9
+    Number of processor faces = 4755
+    Number of boundary faces = 381
+
+Processor 11
+    Number of cells = 9216
+    Number of faces shared with processor 6 = 3
+    Number of faces shared with processor 7 = 1369
+    Number of faces shared with processor 10 = 231
+    Number of faces shared with processor 14 = 701
+    Number of faces shared with processor 15 = 1279
+    Number of faces shared with processor 19 = 346
+    Number of faces shared with processor 23 = 332
+    Number of faces shared with processor 27 = 7
+    Number of processor patches = 8
+    Number of processor faces = 4268
+    Number of boundary faces = 362
+
+Processor 12
+    Number of cells = 9216
+    Number of faces shared with processor 5 = 265
+    Number of faces shared with processor 8 = 1504
+    Number of faces shared with processor 9 = 433
+    Number of faces shared with processor 13 = 428
+    Number of faces shared with processor 16 = 902
+    Number of faces shared with processor 17 = 12
+    Number of processor patches = 6
+    Number of processor faces = 3544
+    Number of boundary faces = 924
+
+Processor 13
+    Number of cells = 9216
+    Number of faces shared with processor 5 = 97
+    Number of faces shared with processor 8 = 1
+    Number of faces shared with processor 9 = 1657
+    Number of faces shared with processor 10 = 288
+    Number of faces shared with processor 12 = 428
+    Number of faces shared with processor 14 = 388
+    Number of faces shared with processor 17 = 1472
+    Number of processor patches = 7
+    Number of processor faces = 4331
+    Number of boundary faces = 803
+
+Processor 14
+    Number of cells = 9216
+    Number of faces shared with processor 6 = 61
+    Number of faces shared with processor 10 = 1826
+    Number of faces shared with processor 11 = 701
+    Number of faces shared with processor 13 = 388
+    Number of faces shared with processor 15 = 459
+    Number of faces shared with processor 17 = 22
+    Number of faces shared with processor 18 = 1194
+    Number of processor patches = 7
+    Number of processor faces = 4651
+    Number of boundary faces = 521
+
+Processor 15
+    Number of cells = 9216
+    Number of faces shared with processor 11 = 1279
+    Number of faces shared with processor 14 = 459
+    Number of faces shared with processor 18 = 40
+    Number of faces shared with processor 19 = 1998
+    Number of faces shared with processor 23 = 18
+    Number of processor patches = 5
+    Number of processor faces = 3794
+    Number of boundary faces = 214
+
+Processor 16
+    Number of cells = 9216
+    Number of faces shared with processor 8 = 73
+    Number of faces shared with processor 12 = 902
+    Number of faces shared with processor 17 = 422
+    Number of faces shared with processor 20 = 1557
+    Number of faces shared with processor 21 = 411
+    Number of faces shared with processor 25 = 252
+    Number of processor patches = 6
+    Number of processor faces = 3617
+    Number of boundary faces = 879
+
+Processor 17
+    Number of cells = 9216
+    Number of faces shared with processor 9 = 10
+    Number of faces shared with processor 12 = 12
+    Number of faces shared with processor 13 = 1472
+    Number of faces shared with processor 14 = 22
+    Number of faces shared with processor 16 = 422
+    Number of faces shared with processor 18 = 391
+    Number of faces shared with processor 20 = 1
+    Number of faces shared with processor 21 = 1636
+    Number of faces shared with processor 22 = 271
+    Number of faces shared with processor 25 = 100
+    Number of processor patches = 10
+    Number of processor faces = 4337
+    Number of boundary faces = 797
+
+Processor 18
+    Number of cells = 9216
+    Number of faces shared with processor 10 = 25
+    Number of faces shared with processor 14 = 1194
+    Number of faces shared with processor 15 = 40
+    Number of faces shared with processor 17 = 391
+    Number of faces shared with processor 19 = 532
+    Number of faces shared with processor 22 = 1924
+    Number of faces shared with processor 23 = 467
+    Number of faces shared with processor 25 = 1
+    Number of faces shared with processor 26 = 77
+    Number of processor patches = 9
+    Number of processor faces = 4651
+    Number of boundary faces = 609
+
+Processor 19
+    Number of cells = 9216
+    Number of faces shared with processor 11 = 346
+    Number of faces shared with processor 15 = 1998
+    Number of faces shared with processor 18 = 532
+    Number of faces shared with processor 23 = 2330
+    Number of processor patches = 4
+    Number of processor faces = 5206
+    Number of boundary faces = 400
+
+Processor 20
+    Number of cells = 9216
+    Number of faces shared with processor 4 = 23
+    Number of faces shared with processor 8 = 491
+    Number of faces shared with processor 16 = 1557
+    Number of faces shared with processor 17 = 1
+    Number of faces shared with processor 21 = 4
+    Number of faces shared with processor 24 = 1552
+    Number of faces shared with processor 25 = 978
+    Number of faces shared with processor 29 = 308
+    Number of processor patches = 8
+    Number of processor faces = 4914
+    Number of boundary faces = 1168
+
+Processor 21
+    Number of cells = 9216
+    Number of faces shared with processor 5 = 7
+    Number of faces shared with processor 9 = 49
+    Number of faces shared with processor 16 = 411
+    Number of faces shared with processor 17 = 1636
+    Number of faces shared with processor 20 = 4
+    Number of faces shared with processor 22 = 564
+    Number of faces shared with processor 25 = 1976
+    Number of faces shared with processor 26 = 400
+    Number of processor patches = 8
+    Number of processor faces = 5047
+    Number of boundary faces = 615
+
+Processor 22
+    Number of cells = 9216
+    Number of faces shared with processor 6 = 8
+    Number of faces shared with processor 10 = 94
+    Number of faces shared with processor 17 = 271
+    Number of faces shared with processor 18 = 1924
+    Number of faces shared with processor 21 = 564
+    Number of faces shared with processor 23 = 259
+    Number of faces shared with processor 26 = 1758
+    Number of faces shared with processor 27 = 2
+    Number of processor patches = 8
+    Number of processor faces = 4880
+    Number of boundary faces = 384
+
+Processor 23
+    Number of cells = 9216
+    Number of faces shared with processor 7 = 28
+    Number of faces shared with processor 11 = 332
+    Number of faces shared with processor 15 = 18
+    Number of faces shared with processor 18 = 467
+    Number of faces shared with processor 19 = 2330
+    Number of faces shared with processor 22 = 259
+    Number of faces shared with processor 26 = 17
+    Number of faces shared with processor 27 = 1491
+    Number of processor patches = 8
+    Number of processor faces = 4942
+    Number of boundary faces = 1096
+
+Processor 24
+    Number of cells = 9216
+    Number of faces shared with processor 4 = 39
+    Number of faces shared with processor 20 = 1552
+    Number of faces shared with processor 25 = 2
+    Number of faces shared with processor 28 = 1620
+    Number of faces shared with processor 29 = 1263
+    Number of processor patches = 5
+    Number of processor faces = 4476
+    Number of boundary faces = 734
+
+Processor 25
+    Number of cells = 9216
+    Number of faces shared with processor 1 = 6
+    Number of faces shared with processor 5 = 90
+    Number of faces shared with processor 16 = 252
+    Number of faces shared with processor 17 = 100
+    Number of faces shared with processor 18 = 1
+    Number of faces shared with processor 20 = 978
+    Number of faces shared with processor 21 = 1976
+    Number of faces shared with processor 24 = 2
+    Number of faces shared with processor 26 = 720
+    Number of faces shared with processor 29 = 1124
+    Number of processor patches = 10
+    Number of processor faces = 5249
+    Number of boundary faces = 305
+
+Processor 26
+    Number of cells = 9216
+    Number of faces shared with processor 2 = 2
+    Number of faces shared with processor 6 = 138
+    Number of faces shared with processor 18 = 77
+    Number of faces shared with processor 21 = 400
+    Number of faces shared with processor 22 = 1758
+    Number of faces shared with processor 23 = 17
+    Number of faces shared with processor 25 = 720
+    Number of faces shared with processor 27 = 469
+    Number of faces shared with processor 29 = 92
+    Number of faces shared with processor 30 = 1149
+    Number of processor patches = 10
+    Number of processor faces = 4822
+    Number of boundary faces = 74
+
+Processor 27
+    Number of cells = 9216
+    Number of faces shared with processor 3 = 21
+    Number of faces shared with processor 7 = 436
+    Number of faces shared with processor 11 = 7
+    Number of faces shared with processor 22 = 2
+    Number of faces shared with processor 23 = 1491
+    Number of faces shared with processor 26 = 469
+    Number of faces shared with processor 30 = 282
+    Number of faces shared with processor 31 = 1331
+    Number of processor patches = 8
+    Number of processor faces = 4039
+    Number of boundary faces = 621
+
+Processor 28
+    Number of cells = 9216
+    Number of faces shared with processor 24 = 1620
+    Number of faces shared with processor 29 = 1015
+    Number of processor patches = 2
+    Number of processor faces = 2635
+    Number of boundary faces = 2241
+
+Processor 29
+    Number of cells = 9216
+    Number of faces shared with processor 1 = 39
+    Number of faces shared with processor 20 = 308
+    Number of faces shared with processor 24 = 1263
+    Number of faces shared with processor 25 = 1124
+    Number of faces shared with processor 26 = 92
+    Number of faces shared with processor 28 = 1015
+    Number of faces shared with processor 30 = 1925
+    Number of processor patches = 7
+    Number of processor faces = 5766
+    Number of boundary faces = 504
+
+Processor 30
+    Number of cells = 9216
+    Number of faces shared with processor 2 = 36
+    Number of faces shared with processor 26 = 1149
+    Number of faces shared with processor 27 = 282
+    Number of faces shared with processor 29 = 1925
+    Number of faces shared with processor 31 = 918
+    Number of processor patches = 5
+    Number of processor faces = 4310
+    Number of boundary faces = 290
+
+Processor 31
+    Number of cells = 9216
+    Number of faces shared with processor 27 = 1331
+    Number of faces shared with processor 30 = 918
+    Number of processor patches = 2
+    Number of processor faces = 2249
+    Number of boundary faces = 1395
+
+Number of processor faces = 69868
+Max number of cells = 9216 (0% above average 9216)
+Max number of processor patches = 10 (45.4545% above average 6.875)
+Max number of faces between processors = 5766 (32.0433% above average 4366.75)
+
+Time = 11001
+
+Processor 0: field transfer
+Detected additional non-decomposed files in "/home/chen/hisa_master_lusgsFoam/examples/M6NN/simulation/11001/uniform"
+Processor 1: field transfer
+Detected additional non-decomposed files in "/home/chen/hisa_master_lusgsFoam/examples/M6NN/simulation/11001/uniform"
+Processor 2: field transfer
+Detected additional non-decomposed files in "/home/chen/hisa_master_lusgsFoam/examples/M6NN/simulation/11001/uniform"
+Processor 3: field transfer
+Detected additional non-decomposed files in "/home/chen/hisa_master_lusgsFoam/examples/M6NN/simulation/11001/uniform"
+Processor 4: field transfer
+Detected additional non-decomposed files in "/home/chen/hisa_master_lusgsFoam/examples/M6NN/simulation/11001/uniform"
+Processor 5: field transfer
+Detected additional non-decomposed files in "/home/chen/hisa_master_lusgsFoam/examples/M6NN/simulation/11001/uniform"
+Processor 6: field transfer
+Detected additional non-decomposed files in "/home/chen/hisa_master_lusgsFoam/examples/M6NN/simulation/11001/uniform"
+Processor 7: field transfer
+Detected additional non-decomposed files in "/home/chen/hisa_master_lusgsFoam/examples/M6NN/simulation/11001/uniform"
+Processor 8: field transfer
+Detected additional non-decomposed files in "/home/chen/hisa_master_lusgsFoam/examples/M6NN/simulation/11001/uniform"
+Processor 9: field transfer
+Detected additional non-decomposed files in "/home/chen/hisa_master_lusgsFoam/examples/M6NN/simulation/11001/uniform"
+Processor 10: field transfer
+Detected additional non-decomposed files in "/home/chen/hisa_master_lusgsFoam/examples/M6NN/simulation/11001/uniform"
+Processor 11: field transfer
+Detected additional non-decomposed files in "/home/chen/hisa_master_lusgsFoam/examples/M6NN/simulation/11001/uniform"
+Processor 12: field transfer
+Detected additional non-decomposed files in "/home/chen/hisa_master_lusgsFoam/examples/M6NN/simulation/11001/uniform"
+Processor 13: field transfer
+Detected additional non-decomposed files in "/home/chen/hisa_master_lusgsFoam/examples/M6NN/simulation/11001/uniform"
+Processor 14: field transfer
+Detected additional non-decomposed files in "/home/chen/hisa_master_lusgsFoam/examples/M6NN/simulation/11001/uniform"
+Processor 15: field transfer
+Detected additional non-decomposed files in "/home/chen/hisa_master_lusgsFoam/examples/M6NN/simulation/11001/uniform"
+Processor 16: field transfer
+Detected additional non-decomposed files in "/home/chen/hisa_master_lusgsFoam/examples/M6NN/simulation/11001/uniform"
+Processor 17: field transfer
+Detected additional non-decomposed files in "/home/chen/hisa_master_lusgsFoam/examples/M6NN/simulation/11001/uniform"
+Processor 18: field transfer
+Detected additional non-decomposed files in "/home/chen/hisa_master_lusgsFoam/examples/M6NN/simulation/11001/uniform"
+Processor 19: field transfer
+Detected additional non-decomposed files in "/home/chen/hisa_master_lusgsFoam/examples/M6NN/simulation/11001/uniform"
+Processor 20: field transfer
+Detected additional non-decomposed files in "/home/chen/hisa_master_lusgsFoam/examples/M6NN/simulation/11001/uniform"
+Processor 21: field transfer
+Detected additional non-decomposed files in "/home/chen/hisa_master_lusgsFoam/examples/M6NN/simulation/11001/uniform"
+Processor 22: field transfer
+Detected additional non-decomposed files in "/home/chen/hisa_master_lusgsFoam/examples/M6NN/simulation/11001/uniform"
+Processor 23: field transfer
+Detected additional non-decomposed files in "/home/chen/hisa_master_lusgsFoam/examples/M6NN/simulation/11001/uniform"
+Processor 24: field transfer
+Detected additional non-decomposed files in "/home/chen/hisa_master_lusgsFoam/examples/M6NN/simulation/11001/uniform"
+Processor 25: field transfer
+Detected additional non-decomposed files in "/home/chen/hisa_master_lusgsFoam/examples/M6NN/simulation/11001/uniform"
+Processor 26: field transfer
+Detected additional non-decomposed files in "/home/chen/hisa_master_lusgsFoam/examples/M6NN/simulation/11001/uniform"
+Processor 27: field transfer
+Detected additional non-decomposed files in "/home/chen/hisa_master_lusgsFoam/examples/M6NN/simulation/11001/uniform"
+Processor 28: field transfer
+Detected additional non-decomposed files in "/home/chen/hisa_master_lusgsFoam/examples/M6NN/simulation/11001/uniform"
+Processor 29: field transfer
+Detected additional non-decomposed files in "/home/chen/hisa_master_lusgsFoam/examples/M6NN/simulation/11001/uniform"
+Processor 30: field transfer
+Detected additional non-decomposed files in "/home/chen/hisa_master_lusgsFoam/examples/M6NN/simulation/11001/uniform"
+Processor 31: field transfer
+Detected additional non-decomposed files in "/home/chen/hisa_master_lusgsFoam/examples/M6NN/simulation/11001/uniform"
+
+End
+

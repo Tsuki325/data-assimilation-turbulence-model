@@ -1,0 +1,52 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2012                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : v2012 OPENFOAM=2012
+Arch   : "LSB;label=32;scalar=64"
+Exec   : postProcess -func writeCellVolumes
+Date   : Dec 01 2024
+Time   : 22:48:36
+Host   : chen-virtual-machine
+PID    : 29037
+I/O    : uncollated
+Case   : /home/chen/hisa_master_lusgsFoam/examples/M6NN/simulation
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Time = 0
+
+Reading fields:
+
+Executing functionObjects
+writeCellVolumes writeCellVolumes write:
+    writing cell-volumes field V to 0
+
+Time = 1
+
+Reading fields:
+
+Executing functionObjects
+writeCellVolumes writeCellVolumes write:
+    writing cell-volumes field V to 1
+
+Time = 11001
+
+Reading fields:
+
+Executing functionObjects
+writeCellVolumes writeCellVolumes write:
+    writing cell-volumes field V to 11001
+
+End
+

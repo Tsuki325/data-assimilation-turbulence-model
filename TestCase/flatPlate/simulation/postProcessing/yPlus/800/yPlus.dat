@@ -1,0 +1,4 @@
+# y+ ()       
+# Time        	patch         	min           	max           	average       
+0             	inviscidWall	0.000000e+00	0.000000e+00	0.000000e+00
+0             	viscousWall	1.098575e+01	1.098575e+01	1.098575e+01

@@ -1,0 +1,112 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+|                                                                             |
+|    HiSA: High Speed Aerodynamic solver                                      |
+|    Copyright (C) 2014-2017 Johan Heyns - CSIR, South Africa                 |
+|    Copyright (C) 2014-2017 Oliver Oxtoby - CSIR, South Africa               |
+|                                                                             |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      blockMeshDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+xL   -0.3048;
+x0   0;
+xU   0.9144;
+
+yL   0;
+yU   0.9652;
+
+vertices
+(
+    ($xL  $yL 0)
+    ($x0  $yL 0)
+    ($x0  $yU 0)
+    ($xL  $yU 0)
+    ($xL  $yL 0.1)
+    ($x0  $yL 0.1)
+    ($x0  $yU 0.1)
+    ($xL  $yU 0.1)
+
+    ($xU  $yL 0)
+    ($xU  $yU 0)
+    ($xU  $yL 0.1)
+    ($xU  $yU 0.1)
+);
+
+blocks
+(
+    hex (0 1 2 3 4 5 6 7)   (20 100 1) simpleGrading (0.02 2000 1)
+    hex (1 8 9 2 5 10 11 6) (60 100 1) simpleGrading (50  2000 1)
+);
+
+edges
+(
+);
+
+boundary
+(
+    freestream
+    {
+        type patch;
+        faces
+        (
+            (3 7 6 2)
+            (2 6 11 9)  
+        );
+    }
+    inlet
+    {
+        type patch;
+        faces
+        (
+            (0 4 7 3)
+        );
+    }
+    outlet
+    {
+        type patch;
+        faces
+        (
+            (9 11 10 8)
+        );
+    }
+    inviscidWall
+    {
+        type wall;
+        faces
+        (
+            (1 5 4 0)
+        );
+    }
+    viscousWall
+    {
+        type wall;
+        faces
+        (
+            (8 10 5 1)
+        );
+    }
+
+    frontAndBack
+    {
+        type empty;
+        faces
+        (
+            (0 3 2 1)
+            (1 2 9 8)
+            (4 5 6 7)
+            (5 10 11 6)
+        );
+    }
+);
+
+mergePatchPairs
+(
+);
+
+// ************************************************************************* //

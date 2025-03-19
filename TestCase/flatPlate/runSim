@@ -1,0 +1,37 @@
+#!/bin/sh
+
+# Source tutorial run functions
+. $WM_PROJECT_DIR/bin/tools/RunFunctions
+
+MESH=mesh
+
+cd simulation
+
+echo 'Create symbolic links to polyMesh in' $MESH
+cd constant
+mkdir polyMesh
+cd polyMesh
+ln -s ../../../$MESH/constant/polyMesh/boundary .
+ln -s ../../../$MESH/constant/polyMesh/faces     .
+ln -s ../../../$MESH/constant/polyMesh/neighbour .
+ln -s ../../../$MESH/constant/polyMesh/owner     .
+ln -s ../../../$MESH/constant/polyMesh/points    .
+cd ../..
+
+rm -rf 0
+cp -r 0.org 0
+
+# Serial ..............................
+# runApplication `getApplication`
+#`getApplication` | tee log.`getApplication`
+
+# Parallel ............................
+runApplication decomposePar
+runParallel `getApplication`
+
+runParallel -s MachNo $(getApplication) -postProcess -func MachNo
+runParallel -s yPlus $(getApplication) -postProcess -func yPlus
+
+cd ..
+
+# -----------------------------------------------------------------%

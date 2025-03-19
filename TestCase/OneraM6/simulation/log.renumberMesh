@@ -1,0 +1,47 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2012                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : v2012 OPENFOAM=2012
+Arch   : "LSB;label=32;scalar=64"
+Exec   : renumberMesh
+Date   : Dec 01 2024
+Time   : 22:48:32
+Host   : chen-virtual-machine
+PID    : 29036
+I/O    : uncollated
+Case   : /home/chen/hisa_master_lusgsFoam/examples/M6NN/simulation
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Mesh size: 294912
+Before renumbering :
+    band           : 3073
+    profile        : 7.48762e+08
+
+Using default renumberMethod.
+
+Selecting renumberMethod CuthillMcKee
+
+Reading volScalarField: Fs I1 I2 Mg PD Prt Res Rew T TuM V alphat betann k lamda1 lamda2 nk nuTilda nut omega p q2 q3 sw xx
+Reading volVectorField: U
+Reading cellSet: highAspectRatioCells
+Reading faceSet: nonOrthoFaces skewFaces upperTriangularFace
+
+After renumbering :
+    band           : 3073
+    profile        : 7.48762e+08
+
+Writing mesh to "1"
+End
+
