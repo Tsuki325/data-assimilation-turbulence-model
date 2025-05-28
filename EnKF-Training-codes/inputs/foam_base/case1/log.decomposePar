@@ -1,0 +1,148 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2012                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : v2012 OPENFOAM=2012
+Arch   : "LSB;label=32;scalar=64"
+Exec   : decomposePar
+Date   : Mar 10 2025
+Time   : 22:00:18
+Host   : chen-virtual-machine
+PID    : 381654
+I/O    : uncollated
+Case   : /home/chen/compression_ramp_2caseVaMa_PrtAndBeta/foam_base/case1
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+--> FOAM Warning : 
+    From void Foam::Time::setControls()
+    in file db/Time/Time.C at line 335
+    Reading "/home/chen/compression_ramp_2caseVaMa_PrtAndBeta/foam_base/case1/0/uniform/time" at line 18 to 26
+    Time read from time dictionary 2000 differs from actual time 0.
+    This may cause unexpected database behaviour. If you are not interested
+    in preserving time state delete the time dictionary.
+
+
+Decomposing mesh region0
+
+Create mesh
+
+Calculating distribution of cells
+Selecting decompositionMethod hierarchical [8]
+
+Finished decomposition in 0 s
+
+Calculating original mesh data
+
+Distributing cells to processors
+
+Distributing faces to processors
+
+Distributing points to processors
+
+Constructing processor meshes
+
+Processor 0
+    Number of cells = 3922
+    Number of faces shared with processor 1 = 52
+    Number of faces shared with processor 4 = 83
+    Number of processor patches = 2
+    Number of processor faces = 135
+    Number of boundary faces = 7977
+
+Processor 1
+    Number of cells = 3922
+    Number of faces shared with processor 0 = 52
+    Number of faces shared with processor 4 = 6
+    Number of faces shared with processor 5 = 131
+    Number of processor patches = 3
+    Number of processor faces = 189
+    Number of boundary faces = 7917
+
+Processor 2
+    Number of cells = 3922
+    Number of faces shared with processor 5 = 84
+    Number of faces shared with processor 6 = 123
+    Number of processor patches = 2
+    Number of processor faces = 207
+    Number of boundary faces = 7903
+
+Processor 3
+    Number of cells = 3924
+    Number of faces shared with processor 6 = 88
+    Number of faces shared with processor 7 = 130
+    Number of processor patches = 2
+    Number of processor faces = 218
+    Number of boundary faces = 7902
+
+Processor 4
+    Number of cells = 3923
+    Number of faces shared with processor 0 = 83
+    Number of faces shared with processor 1 = 6
+    Number of faces shared with processor 5 = 153
+    Number of processor patches = 3
+    Number of processor faces = 242
+    Number of boundary faces = 8068
+
+Processor 5
+    Number of cells = 3923
+    Number of faces shared with processor 1 = 131
+    Number of faces shared with processor 2 = 84
+    Number of faces shared with processor 4 = 153
+    Number of faces shared with processor 6 = 87
+    Number of processor patches = 4
+    Number of processor faces = 455
+    Number of boundary faces = 7887
+
+Processor 6
+    Number of cells = 3923
+    Number of faces shared with processor 2 = 123
+    Number of faces shared with processor 3 = 88
+    Number of faces shared with processor 5 = 87
+    Number of faces shared with processor 7 = 54
+    Number of processor patches = 4
+    Number of processor faces = 352
+    Number of boundary faces = 7928
+
+Processor 7
+    Number of cells = 3924
+    Number of faces shared with processor 3 = 130
+    Number of faces shared with processor 6 = 54
+    Number of processor patches = 2
+    Number of processor faces = 184
+    Number of boundary faces = 8016
+
+Number of processor faces = 991
+Max number of cells = 3924 (0.0286779% above average 3922.88)
+Max number of processor patches = 4 (45.4545% above average 2.75)
+Max number of faces between processors = 455 (83.6529% above average 247.75)
+
+Time = 0
+
+Processor 0: field transfer
+Detected additional non-decomposed files in "/home/chen/compression_ramp_2caseVaMa_PrtAndBeta/foam_base/case1/0/uniform"
+Processor 1: field transfer
+Detected additional non-decomposed files in "/home/chen/compression_ramp_2caseVaMa_PrtAndBeta/foam_base/case1/0/uniform"
+Processor 2: field transfer
+Detected additional non-decomposed files in "/home/chen/compression_ramp_2caseVaMa_PrtAndBeta/foam_base/case1/0/uniform"
+Processor 3: field transfer
+Detected additional non-decomposed files in "/home/chen/compression_ramp_2caseVaMa_PrtAndBeta/foam_base/case1/0/uniform"
+Processor 4: field transfer
+Detected additional non-decomposed files in "/home/chen/compression_ramp_2caseVaMa_PrtAndBeta/foam_base/case1/0/uniform"
+Processor 5: field transfer
+Detected additional non-decomposed files in "/home/chen/compression_ramp_2caseVaMa_PrtAndBeta/foam_base/case1/0/uniform"
+Processor 6: field transfer
+Detected additional non-decomposed files in "/home/chen/compression_ramp_2caseVaMa_PrtAndBeta/foam_base/case1/0/uniform"
+Processor 7: field transfer
+Detected additional non-decomposed files in "/home/chen/compression_ramp_2caseVaMa_PrtAndBeta/foam_base/case1/0/uniform"
+
+End
+

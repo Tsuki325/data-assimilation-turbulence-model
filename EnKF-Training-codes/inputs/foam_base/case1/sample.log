@@ -1,0 +1,52 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2012                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : v2012 OPENFOAM=2012
+Arch   : "LSB;label=32;scalar=64"
+Exec   : postProcess -func sampleDict -case results_ensemble/sample_2/case1
+Date   : Dec 03 2024
+Time   : 12:11:44
+Host   : chen-virtual-machine
+PID    : 73362
+I/O    : uncollated
+Case   : /home/chen/DAFI/ensemble-learning/test_cases/traincase/compression_ramp_2caseVaMa_PrtAndBeta_withoutTheta/results_ensemble/sample_2/case1
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Reading set description:
+    line_x0
+
+Time = 0
+
+Reading fields:
+    volVectorField: U
+
+Executing functionObjects
+
+Time = 12900
+
+Reading fields:
+    volVectorField: U
+
+Executing functionObjects
+
+Time = 13000
+
+Reading fields:
+    volVectorField: U
+
+Executing functionObjects
+
+End
+

@@ -1,0 +1,53 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2012                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : v2012 OPENFOAM=2012
+Arch   : "LSB;label=32;scalar=64"
+Exec   : renumberMesh
+Date   : Mar 10 2025
+Time   : 22:00:16
+Host   : chen-virtual-machine
+PID    : 381636
+I/O    : uncollated
+Case   : /home/chen/compression_ramp_2caseVaMa_PrtAndBeta/foam_base/case1
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+--> FOAM Warning : 
+    From void Foam::Time::setControls()
+    in file db/Time/Time.C at line 335
+    Reading "/home/chen/compression_ramp_2caseVaMa_PrtAndBeta/foam_base/case1/0/uniform/time" at line 18 to 26
+    Time read from time dictionary 2000 differs from actual time 0.
+    This may cause unexpected database behaviour. If you are not interested
+    in preserving time state delete the time dictionary.
+Create mesh for time = 0
+
+Mesh size: 31383
+Before renumbering :
+    band           : 100
+    profile        : 2.80963e+06
+
+Using default renumberMethod.
+
+Selecting renumberMethod CuthillMcKee
+
+Reading volScalarField: Fs I1 I1_16 I1_4 I1_5 I2 I2_1 I2_2 I2_3 I2_4 I2_5 Mg PD Prt Rekd Res Rew T TuM V alphat betann c k lambda1 lambda2 lamda1 lamda2 nk nu nut omega p p1 pseudoCoField q2 q3 q4 rho sw up wallDistance xx yPlus yp
+Reading volVectorField: U
+Reading volSymmTensorField: Sp
+
+After renumbering :
+    band           : 100
+    profile        : 2.80963e+06
+
+Writing mesh to "0"
+End
+
