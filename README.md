@@ -9,7 +9,7 @@
 
 [3] The HISA solver is a C++ based tool for computing compressible transonic and supersonic flow (https://hisa.gitlab.io/#). In this work, this solver is complined based on *OpenFoam v2012* coupled with ANN enhanced turbulence heat flux and Reynolds stress.
 
-[4] Compile the compressible turbulence model by running wmake in the ./TurbulenceModels/turbulenceModels director, and then run run wmake in the ./TurbulenceModels/compressible director.
+[4] Compile the compressible turbulence model by running *wmake* in the ./TurbulenceModels/turbulenceModels director, and then run *wmake* in the ./TurbulenceModels/compressible director.
 
 [4] Compile the feature extraction program *writeFieldsMLr4.C* by running *wmake*, which is used to extract NN inputs during the training process.
 
