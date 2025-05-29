@@ -9,17 +9,17 @@
 
 [3] The HISA solver is a C++ based tool for computing compressible transonic and supersonic flow (https://hisa.gitlab.io/#). In this work, this solver is complined based on *OpenFoam v2012* coupled with ANN enhanced turbulence heat flux and Reynolds stress.
 
-[4] Compile the compressible turbulence model by running *wmake* in the ./TurbulenceModels/turbulenceModels director, and then run *wmake* in the ./TurbulenceModels/compressible director.
+[4] Compile the compressible turbulence model by running `wmake` in the ./TurbulenceModels/turbulenceModels director, and then run `wmake` in the ./TurbulenceModels/compressible director.
 
-[4] Compile the feature extraction program *writeFieldsMLr4.C* by running *wmake*, which is used to extract NN inputs during the training process.
+[4] Compile the feature extraction program *writeFieldsMLr4.C* by running `wmake`, which is used to extract NN inputs during the training process.
 
 **Models training:**
 
-Once the above environment is installed, the training program can be executed by running: *python /path/to/bin/dafi dafi.in*, by running the *pltmisfit.py* to plot the convergence history
+Once the above environment is installed, the training program can be executed by running: `python /path/to/bin/dafi dafi.in`, by running the `pltmisfit.py` to plot the convergence history
 
 **Models testing:**
 
-Enable fully coupled model evaluation by setting `betannmodel 1; Prtnnmodel 1;` in the `constant/turbulenceProperties` file, then run `./runsim` in the case directory.
+Enable fully coupled model evaluation by setting *betannmodel 1; Prtnnmodel 1;* in the *constant/turbulenceProperties* file, then run `./runsim` in the case directory.
 
 
 
