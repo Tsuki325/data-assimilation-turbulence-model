@@ -41,7 +41,7 @@ SST = np.loadtxt('wallHeatFlux_walls_constant.raw',skiprows=2)
 SSTNN = np.loadtxt('wallHeatFlux_walls_constant1.raw',skiprows=2)
 a=100
 b=220
-plt.plot(exp[:, 0]/1.2/0.0072, exp[:, 1],label=r'Exp' ,color='black',marker='s',markersize=7,linestyle='',markerfacecolor='none',markeredgewidth=1.5) 
+plt.plot(exp[:, 0]/0.0072, exp[:, 1],label=r'Exp' ,color='black',marker='s',markersize=7,linestyle='',markerfacecolor='none',markeredgewidth=1.5) 
 
 from scipy.interpolate import UnivariateSpline
 
